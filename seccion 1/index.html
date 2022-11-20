@@ -9,73 +9,42 @@
     <title></title>
 </head>
 <body>
-    <h1>
-        Construir la tabla de verdad para las siguientes expresiones:
-    </h1>
-    <h3>
-    ● ( P ∧ Q)
+    <h1>Se desea elaborar un algoritmo que permita identificar la cantidad de dólares equivalentes a una cantidad
+        de pesos colombianos. </h1>
+    <div id="b">
+            <h3> DOLARES A PESOS</h3>
+        <form id="input">
+            <input type="number" placeholder="#dolares" name="dolares">
+            <input type="submit" name="envia">
+        </form>
+    <table>
+        <thead>
+            <tr>
+                <th>DOLARES</th>
+                <th>PESOS</th>
+            </tr> 
+        </thead> 
+        <tbody></tbody>
+    </table>
     
-    </h3>  
+    </div>
+    <div id="a">
+            <h3> PESOS A DOLARES</h3>
+        <form id="input2">
+            <input type="number" placeholder="#pesos" name="pesos">
+            <input type="submit" name="enviar" id="enviar">
+        </form>
     <table>
         <thead>
             <tr>
-                <th>P</th>
-                <th>∧</th>
-                <th>Q</th>
-            </tr>
-            <tr>
-                <td>v</td>
-                <td>v</td>
-                <td>v</td>
-            </tr>
-            <tr>
-                <td>v</td>
-                <td>f</td>
-                <td>f</td>
-            </tr>
-            <tr>
-                <td>f</td>
-                <td>f</td>
-                <td>v</td>
-            </tr>
-            <tr>
-                <td>f</td>
-                <td>f</td>
-                <td>v</td>
-            </tr>
-        </thead>
-    </table>  
-    <h3>
-        ● ( P ∨ Q)
-    </h3>
-    <table>
-        <thead>
-            <tr>
-                <th>P</th>
-                <th>∨</th>
-                <th>Q</th>
-            </tr>
-            <tr>
-                <td>v</td>
-                <td>v</td>
-                <td>v</td>
-            </tr>
-            <tr>
-                <td>v</td>
-                <td>v</td>
-                <td>f</td>
-            </tr>
-            <tr>
-                <td>f</td>
-                <td>v</td>
-                <td>v</td>
-            </tr>
-            <tr>
-                <td>f</td>
-                <td>f</td>
-                <td>f</td>
-            </tr>
-        </thead>
-     </table> 
+                <th>PESOS</th>
+                <th>DOLARES</th>
+            </tr> 
+        </thead> 
+        <tbody id="tbody2" name="tbody"></tbody>
+    </table>
+    
+        </div>
+    
 </body>
 </html>
