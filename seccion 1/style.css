@@ -22,22 +22,21 @@ table {
 
 table thead tr th {
     border: solid black  ;
-    background-color: rgb(230, 65, 186);
+    background-color: rgb(255, 193, 36);
     font-size:20px;
     padding: 10px 50px 10px;
     font-size: 16px;
 }
-    table tbody tr td {
-        border: solid black;
-        text-align: center;
+table tbody tr td {
+    text-align: center;
+    border: solid black;
 }
 table tbody tr:nth-child(even) td {
-    background-color: rgb(174, 239, 118);
+    background-color: rgb(118, 148, 239);
 }
 table tbody tr:nth-child(odd) td{
     background-color: rgb(89, 214, 239);
 }
 body{
-    
-    background-color: rgb(241, 147, 76);
+    background-color: rgb(109, 241, 188);
 }
