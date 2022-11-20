@@ -22,18 +22,18 @@
         display: block;
     }
     table {
-        margin: 0px 450px ;
+        margin: 0px 490px ;
     
     }
     
     th{
         border:  solid black  ;
-        background-color: rgb(236, 7, 7);
+        background-color: rgb(7, 179, 236);
     }
 
     table thead tr {
         border: solid black  ;
-        background-color: rgb(236, 7, 7);
+        background-color: rgb(171, 7, 236);
         font-size:10px;
         padding: 10px 50px 10px;
         font-size: 16px;
@@ -43,7 +43,7 @@
 
     table thead tr td {
         border: solid black  ;
-        background-color: rgb(251, 102, 102);
+        background-color: rgb(251, 219, 102);
         font-size:20px;
         padding: 15px 30px 10px;
         font-size: 16px;
@@ -52,5 +52,5 @@
     
     body{
         
-        background-color: rgb(235, 223, 121);
+        background-color: rgb(121, 235, 212);
     }
