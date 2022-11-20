@@ -7,7 +7,9 @@ h1, h3{
 h3{
     color: rgb(33, 0, 100);
 }
+
 input{
+
     margin:5px 550px;
     /* background: #f00; */
 }
@@ -18,25 +20,34 @@ input[type="submit"]{
 }
 table {
     margin: 0px 450px ;
+
+
+
 }
+
+
+
 
 table thead tr th {
     border: solid black  ;
-    background-color: rgb(255, 193, 36);
+    background-color: rgb(236, 7, 7);
     font-size:20px;
     padding: 10px 50px 10px;
     font-size: 16px;
+    border-spacing: 10px;
+
 }
 table tbody tr td {
+    border:solid black;
+
     text-align: center;
-    border: solid black;
 }
 table tbody tr:nth-child(even) td {
-    background-color: rgb(118, 148, 239);
+    background-color: rgb(118, 239, 166);
 }
 table tbody tr:nth-child(odd) td{
-    background-color: rgb(89, 214, 239);
+    background-color: rgb(89, 99, 239);
 }
 body{
-    background-color: rgb(109, 241, 188);
+    background-color: rgb(229, 76, 229);
 }
