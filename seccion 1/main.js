@@ -1,52 +1,42 @@
 addEventListener("DOMContentLoaded", (e)=>{
-        let form=document.querySelector('#input')
+    let form=document.querySelector('#input')
 
-        form.addEventListener("submit",(e)=>{
-            e.preventDefault();       
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault();       
 
-            let datosEntrada = Object.fromEntries(new FormData(e.target))
-                let dolares= Number (datosEntrada.dolares)
-                let pesos= 4809.50
-                let res= dolares * pesos
-                //let config =intl.NumberFormat('de-DE',{style:'currency',currency:'COB'});
-                //config= (config.format(dolares * pesos));
-                //perdon pero no entendi como colocarle la libreria :')
+        let datosEntrada = Object.fromEntries(new FormData(e.target))
 
+            let nciudad= datosEntrada.ciudad
+            let f= Number(datosEntrada.Fahrenheit)
+            let res=(f-32) / 1.8
+            let tabla=document.querySelector("tbody");
+            tabla.insertAdjacentHTML("beforeend",`
+                <tr>
 
+                    <td> ${nciudad}  </td>
+                    <td> ${f}° </td>
+                    <td> ${res}° </td>
+                </tr>
+                `)          
+    })     
+    let form1=document.querySelector('#input2')
 
-                let tabla=document.querySelector("tbody");
-                tabla.insertAdjacentHTML("beforeend",`
-                    <tr>
-                        <td> ${dolares}  USD</td>
-                        <td> ${res} COB</td>
-                    </tr>
-                    `)
-        })         
-        let form2=document.querySelector('#input2')
+    form1.addEventListener("submit",(e)=>{
+        e.preventDefault();       
 
-        form2.addEventListener("submit",(e)=>{
-            e.preventDefault();       
+        let datosEntrada = Object.fromEntries(new FormData(e.target))
 
-            let datosEntrada2 = Object.fromEntries(new FormData(e.target))
+            let nciudad2= datosEntrada.ciudad2
+            let f1= Number(datosEntrada.CENTIGRADOS)
+            let res2=(f1* 1.8 )+ 32
+            let tabla=document.querySelector("tbody[name=tbody]");
+            tabla.insertAdjacentHTML("beforeend",`
+                <tr>
 
-
-
-
-
-                let pesos2= Number (datosEntrada2.pesos)
-                let dolares2= 0.00021
-                let res2= dolares2 * pesos2
-
-
-
-                let tabla2=document.querySelector("tbody[name=tbody]");
-                tabla2.insertAdjacentHTML("beforeend",`
-                    <tr>
-                        <td> ${pesos2}COB  </td>
-                        <td> ${res2} USD</td>
-                    </tr>
-                    `)
-
-
-        })    
-    })
+                    <td> ${nciudad2}  </td>
+                    <td> ${f1} °</td>
+                    <td> ${res2} °</td>
+                </tr>
+                `)          
+    })        
+})
