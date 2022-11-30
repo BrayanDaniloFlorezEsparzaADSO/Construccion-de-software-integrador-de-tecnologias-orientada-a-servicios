@@ -8,19 +8,55 @@ addEventListener("DOMContentLoaded", (e)=>{
         if(cont <=50){
         let datosEntrada = Object.fromEntries(new FormData(e.target))
 
-            let nacimiento= datosEntrada.nacimiento
-            let actual= datosEntrada.actual
-            let res= actual-nacimiento
-            let tabla=document.querySelector("tbody");
-            tabla.insertAdjacentHTML("beforeend",`
-                <tr>
-                    <td> ${nacimiento}  </td>
-                    <td> ${actual}  </td>
-                    <td> ${res  }  </td>
-                </tr>
-                `)
+            let año=datosEntrada.año
+            // let res= año/4
+            if (año % 4 != 0){
+                let tabla=document.querySelector("tbody");
+                tabla.insertAdjacentHTML("beforeend",`
+                    <tr>
+                        <td>${año}  </td>
+                        <td>  </td>
+                        <td> X  </td>
+                    </tr>
+                    `)
+            }
+            
+            
+            else if (año % 4 == 0 & año % 100 != 0){
+                let tabla=document.querySelector("tbody");
+                tabla.insertAdjacentHTML("beforeend",`
+                    <tr>
+                        <td>${año}  </td>
+                        <td> X </td>
+                        <td>   </td>
+                    </tr>
+                    `)
+            } 
 
-            cont++
+            else if(año % 4 == 0 & año % 100 == 0 & año % 400 != 0){
+                let tabla=document.querySelector("tbody");
+                tabla.insertAdjacentHTML("beforeend",`
+                    <tr>
+                        <td>${año}  </td>
+                        <td>  </td>
+                        <td> X  </td>
+                    </tr>
+                    `)
+            } 
+            
+            
+            else if(año % 4 == 0 & año % 100 == 0 & año % 400 == 0){
+                let tabla=document.querySelector("tbody");
+                tabla.insertAdjacentHTML("beforeend",`
+                    <tr>
+                        <td>${año}  </td>
+                        <td>  X </td>
+                        <td>   </td>
+                    </tr>
+                    `)
+            } 
+            
+        
         }
     })               
 })
