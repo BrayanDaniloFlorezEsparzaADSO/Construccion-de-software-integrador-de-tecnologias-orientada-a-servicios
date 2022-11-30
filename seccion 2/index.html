@@ -10,31 +10,49 @@
 </head>
 <body>
     <h1>
-        ● Realizar la conversión de una temperatura dada en grados Centígrados a grados Fahrenheit (Fórmula: F =
-        (9/5) C + 32).             
+        ● Escribir el algoritmo que permite calcular la nota correspondiente al primer parcial de “análisis” para un
+        estudiante cualquiera. Se debe considerar que hay dos talleres y un quiz, que en conjunto valen un 30% de
+        la nota y el resto (70%) corresponde a la nota del examen parcial.              
     </h1>
     <h3>
-        C° a F°
+        Dos talleres = 15% <br>
+        Un quiz =15% <br>
+        un parcial final =70%
     </h3>
     <div id="b">
         <form id="input">
-            <input type="number   " placeholder="centigrados" name="centigrados">
+            <input type="number   " placeholder="taller 1" name="taller_1">
+            <input type="number   " placeholder="taller 2" name="taller_2">
+            <input type="number   " placeholder="quiz" name="quiz">
+            <input type="number   " placeholder="parcial" name="parcial">
             <input type="submit" name="envia">
         </form>
     <table>
         <thead>
             <tr>
-                <th colspan="2">GRADOS</th>
+                <th colspan="7">CALCULO DEL PROMEDIO DE LAS NOTAS</th>
                 
             </tr> 
             <tr>
-                <td>C°</td>
-                <td>F°</td>
+                
+
+                <th colspan="7">NOTAS</th>
+            </tr>
+            
+            <tr>
+                <td>Estudiante</td>
+                <td>Taller 1</td>
+                <td>Taller 2</td>
+                <td>Quiz</td>
+                <td>Parcial</td>
+                <td>Nota final</td>
+                <td>Estado</td>
             </tr>
             
         </thead> 
         <tbody id="tbody"></tbody>
     </table>
-    
+    <h3>att: en la nota final se pasa con 70 o mas
+    </h3>
 </body>
 </html>
