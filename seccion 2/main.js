@@ -1,62 +1,65 @@
 addEventListener("DOMContentLoaded", (e)=>{
     let form=document.querySelector('#input')
-
-    let cont =1   
+    let conta= 1
     form.addEventListener("submit",(e)=>{
-        e.preventDefault();       
-
-        if(cont <=50){
-        let datosEntrada = Object.fromEntries(new FormData(e.target))
-        let taller1= Number(datosEntrada.taller_1)
-        let taller2= Number(datosEntrada.taller_2)
-        let quiz=Number(datosEntrada.quiz)
-        let parcial=Number(datosEntrada.parcial)
-
-        let res= taller1+taller2
-        let res2= (res *15)/100
-
-        let res3=(quiz*15)/100
-
-        let res4=(parcial*70)/100
-
-        let res5= res2+res3+res4
-        if(res5>=70){
-          let tabla=document.querySelector("tbody")
-        tabla.insertAdjacentHTML("beforeend",`
-            <tr>
+        e.preventDefault();   
+        let datosEntrada = Object.fromEntries(new FormData(e.target))    
+        // let h3=document.querySelector("#h4")
+        // h3.insertAdjacentHTML("beforeend",`
+        // Al TERMINO DE ${cont} SE DOBLARA
+        // `)
+        if(conta <=6){
             
-                <td> ${cont}</td>
-                <td> ${taller1}</td>
-                <td> ${taller2}</td>
-                <td> ${quiz}</td>
-                <td> ${parcial}</td>
-                <td> ${res5}</td>
-                <td> aprobado</td>
-                
+        let datosEntrada = Object.fromEntries(new FormData(e.target))
+        let año =Number(datosEntrada.año)  
+        let capital= Number(datosEntrada.capital)
+        let interes=Number(datosEntrada.interes)
+        let res= (capital *interes)/100
+        let res1=capital+res
+        let res3= res1*2
 
-            </tr>
-            `)  
-        }
-        else{
+        
             let tabla=document.querySelector("tbody")
         tabla.insertAdjacentHTML("beforeend",`
             <tr>
             
-                <td> ${cont}</td>
-                <td> ${taller1}</td>
-                <td> ${taller2}</td>
-                <td> ${quiz}</td>
-                <td> ${parcial}</td>
-                <td> ${res5}</td>
-                <td> reprobado</td>
+                <td> ${conta}</td>
+                <td>$ ${capital}</td>
+                <td> ${interes}%</td>
+                <td> $${res1}</td>
+                <td> ${año}</td>
+                <td> ${res3}</td>
+                
                 
 
             </tr>
             `)
-        }
+        conta++
+            // if(conta=año){
+            //     let res3= res1*2
+            //     let tabla=document.querySelector("tbody")
+            //     tabla.insertAdjacentHTML("beforeend",`
+            //         <tr>
+                    
+            //             <td> ${conta}</td>
+            //             <td> ${capital}</td>
+            //             <td> ${interes}</td>
+            //             <td> ${res1}</td>
+            //             <td> ${año}</td>
+            //             <td> ${res3}</td>
+                        
+                        
+                        
+        
+            //         </tr>
+            //         `)
+           
+            // }
 
         
-        cont++
         }
+        
+        
+        
     })               
 })
