@@ -3,62 +3,72 @@ addEventListener("DOMContentLoaded", (e)=>{
     let conta= 1
     form.addEventListener("submit",(e)=>{
         e.preventDefault();   
-        let datosEntrada = Object.fromEntries(new FormData(e.target))    
-        // let h3=document.querySelector("#h4")
-        // h3.insertAdjacentHTML("beforeend",`
-        // Al TERMINO DE ${cont} SE DOBLARA
-        // `)
-        if(conta <=6){
-            
-        let datosEntrada = Object.fromEntries(new FormData(e.target))
-        let año =Number(datosEntrada.año)  
-        let capital= Number(datosEntrada.capital)
-        let interes=Number(datosEntrada.interes)
-        let res= (capital *interes)/100
-        let res1=capital+res
-        let res3= res1*2
-
+        if(conta<=20){
+            let datosEntrada = Object.fromEntries(new FormData(e.target))  
+            let numero=Number(datosEntrada.numero)
+            let numero2=25
+            let numero3=numero2
+            let numero4=numero
+                        if(numero<numero2){
+                            let tabla=document.querySelector("tbody")
+                            tabla.insertAdjacentHTML("beforeend",`
+                                <tr>
         
-            let tabla=document.querySelector("tbody")
-        tabla.insertAdjacentHTML("beforeend",`
-            <tr>
-            
-                <td> ${conta}</td>
-                <td>$ ${capital}</td>
-                <td> ${interes}%</td>
-                <td> $${res1}</td>
-                <td> ${año}</td>
-                <td> ${res3}</td>
-                
-                
+                                    
+                                    <td> ${conta}</td>
+                                    <td> ${numero}</td>
+                                    <td><</td>
+                                    <td>X</td>
+                                    <td></td>
+                                    <td> ${numero2}</td>
+                                    
+        
+        
+        
+                                </tr>
+                                `)  
+                        }
+                        else if(numero2=numero  ){
+                            let tabla=document.querySelector("tbody")
+                            tabla.insertAdjacentHTML("beforeend",`
+                            <tr>
+                                <td> ${conta}</td>
+                                <td> ${numero}</td>
+                                <td>=</td>
+                                <td></td>
+                                <td>X</td>
+                                <td> ${numero2}</td>
+                            
 
-            </tr>
-            `)
+
+
+                            </tr> 
+                            `)
+                        }
+                        
+
+                        else if(numero4>numero3){
+                            let tabla=document.querySelector("tbody")
+                            tabla.insertAdjacentHTML("beforeend",`
+                            <tr>
+        
+                                    <td> ${numero4}</td>
+                                    <td>></td>
+                                    <td> ${numero3}</td>
+                                    
+        
+        
+        
+                                </tr>
+                            `)
+                        }
+
+                        
         conta++
-            // if(conta=año){
-            //     let res3= res1*2
-            //     let tabla=document.querySelector("tbody")
-            //     tabla.insertAdjacentHTML("beforeend",`
-            //         <tr>
-                    
-            //             <td> ${conta}</td>
-            //             <td> ${capital}</td>
-            //             <td> ${interes}</td>
-            //             <td> ${res1}</td>
-            //             <td> ${año}</td>
-            //             <td> ${res3}</td>
-                        
-                        
-                        
-        
-            //         </tr>
-            //         `)
-           
-            // }
-
         
         }
         
+            
         
         
     })               
