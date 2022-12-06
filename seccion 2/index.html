@@ -10,34 +10,47 @@
 </head>
 <body>
     <h1>
-        ●   Hacer un programa que sume 5 precios de camisas (en dólares) y que luego muestre el total de la venta en 
-        pesos.             
+        ●   Hacer un programa que registre el consumo realizado por los clientes de un restaurante, si el consumo de
+        cada cliente excede 50000 se hará un descuento del 20%. Se debe mostrar el pago de cada cliente y el total
+        de todos los pagos.             
     </h1>
     <h3>
         DOLARS A PESOS
     </h3>
     <div id="b">
         <form id="hola">
-            <input type="text" placeholder="ingrese el objeto" name="producto">
-            <input type="number   " placeholder="ingrese el precio" name="precio">
-            <input type="number   " placeholder="ingrese el precio" name="precio2">
-            <input type="number   " placeholder="ingrese el precio" name="precio3">
-            <input type="number   " placeholder="ingrese el precio" name="precio4">
-            <input type="number   " placeholder="ingrese el precio" name="precio5">
+            <input type="text   " placeholder="cliente" name="cliente">
+            <input type="number   " placeholder="precio" name="valor">
             <input type="submit" name="envia">
         </form>
     <table>
         <thead>
-            <tr>
-                <th>#</th>
-                <th > OBJETO</th>
-                <th > VALOR TOTAL DOLARES</th>
-                <th>VALOR TOTAL PESOS</th>
-                
-            </tr> 
+            <tr >
+                <th rowspan="2" >#</th>
             
+                <th rowspan="2"> CLIENTE</th>
+           
+                <th rowspan="2"> VALOR DEL PRODUCTO</th>
+            
+
+                <th colspan="2">
+                    DESCUENTO
+                </th>
+                <th rowspan="2">
+                    VALOR DESCUENTO
+                </th>
+            </tr>
+           <tr> 
+                <th>SI</th>
+                <th>NO</th>
+           </tr>
+                 
         </thead> 
+        
         <tbody id="tbody"></tbody>
+        
+        <td colspan="5" id="hola1">TOTAL</td>
+        <td  id="hola2"></td>
     </table>
     
 </body>
